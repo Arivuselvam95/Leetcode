@@ -8,16 +8,14 @@ class Solution {
         for(int i=0;i<n1;i++){
             char ch1 = s.charAt(i);
             char ch2 = t.charAt(i);
+            
             if(!map1.containsKey(ch1))
                 map1.put(ch1,ch2);
             else{
                 if(ch2!=map1.get(ch1))
                     return false;
             }
-        }
-        for(int i=0;i<n1;i++){
-            char ch1 = s.charAt(i);
-            char ch2 = t.charAt(i);
+
             if(!map2.containsKey(ch2))
                 map2.put(ch2,ch1);
             else{
@@ -25,6 +23,7 @@ class Solution {
                     return false;
             }
         }
+        
         return true;
     }
 }
