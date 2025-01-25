@@ -13,7 +13,9 @@ class Solution {
                     found = true;
                     break;
                 }
-                j = (j + 1) % n; // Move to the next index in circular fashion
+                j++;
+                if(j==n)
+                    j=0; // Move to the next index in circular fashion
             }
 
             if (!found) {
