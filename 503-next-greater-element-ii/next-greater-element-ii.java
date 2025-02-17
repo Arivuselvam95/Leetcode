@@ -4,9 +4,8 @@ class Solution {
         int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
-            int j = (i + 1) % n; // Start checking from the next index
+            int j = (i + 1) % n; 
             boolean found = false;
-
             while (j != i) {
                 if (nums[j] > nums[i]) {
                     arr[i] = nums[j];
@@ -15,11 +14,10 @@ class Solution {
                 }
                 j++;
                 if(j==n)
-                    j=0; // Move to the next index in circular fashion
+                    j=0; 
             }
-
             if (!found) {
-                arr[i] = -1; // If no greater element is found
+                arr[i] = -1; 
             }
         }
 
