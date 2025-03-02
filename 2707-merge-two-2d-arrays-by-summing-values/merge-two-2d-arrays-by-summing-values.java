@@ -11,7 +11,8 @@ class Solution {
         int arr[][] = new int[n][2];
         int index=0;
         for(int key : map.keySet()){
-            arr[index++] = new int[]{key, map.get(key)};
+            arr[index][0] = key;
+            arr[index++][1] = map.get(key);
         }
         return arr;
     }
