@@ -2,20 +2,20 @@ class Solution {
     public String smallestNumber(String pattern) {
         Stack<Integer> stack = new Stack<>();
         int n = 1;
-        String ans = "";
+        StringBuilder ans = new StringBuilder();
         for(int i=0;i<pattern.length();i++){
             if(pattern.charAt(i)=='I'){
-                ans= ans+n;
+                ans.append(n);
                 while(!stack.isEmpty())
-                    ans = ans + stack.pop();
+                    ans.append(stack.pop());
             }else{
                 stack.push(n);
             }
             n++;
         }
-        ans= ans+n;
+        ans.append(n);
         while(!stack.isEmpty())
-            ans = ans + stack.pop();
-        return ans;
+            ans.append(stack.pop());
+        return ans.toString();
     }
 }
